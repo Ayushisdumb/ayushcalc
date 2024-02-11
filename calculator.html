@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <button onclick="showSimpleCalculator()">Simple Calculator</button>
+  <button onclick="showAdvancedCalculator()">Advanced Calculator</button>
+</div>
+
+<div id="simple-calculator" class="calculator" style="display: none;">
+  <h2>Simple Calculator</h2>
+  <input type="number" id="simple-input1" placeholder="Enter first number"><br>
+  <input type="number" id="simple-input2" placeholder="Enter second number"><br>
+  <button onclick="performOperation('+')">Add</button>
+  <button onclick="performOperation('-')">Subtract</button>
+  <button onclick="performOperation('*')">Multiply</button>
+  <button onclick="performOperation('/')">Divide</button><br>
+  <h3>Result: <span id="simple-result"></span></h3>
+</div>
+
+<div id="advanced-calculator" class="calculator" style="display: none;">
+  <h2>Advanced Calculator</h2>
+  <input type="text" id="numbers-input" placeholder="Enter numbers separated by commas"><br>
+  <select id="method-selector">
+    <option value="prime-factorization">Prime Factorization</option>
+    <option value="division-method">Division Method</option>
+  </select><br>
+  <button onclick="performAdvancedOperation()">Calculate</button><br>
+  <h3>Result: <span id="advanced-result"></span></h3>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
